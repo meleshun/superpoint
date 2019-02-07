@@ -1,0 +1,19 @@
+{
+  "name": "superpoint",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "meleshun",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {},
+  "description": ""
+}

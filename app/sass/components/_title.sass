@@ -1,0 +1,30 @@
+/* DATA TITLE */
+[data-title]
+	position: relative
+	padding-bottom: 3px
+	border-bottom: 1px dotted $contrast-color
+	color: $contrast-color
+	cursor: help
+	&:hover
+		&::before
+			content: attr(data-title)
+			position: absolute
+			right: -12px
+			bottom: 28px
+			display: inline-block
+			padding: 4px 10px
+			border-radius: 2px
+			background: #00b7bd
+			color: #fff
+			font-size: 12px
+			font-family: sans-serif
+			white-space: nowrap
+		&::after
+			content: ''
+			position: absolute
+			top: -6px
+			right: -4px
+			display: inline-block
+			color: #fff
+			border: 8px solid transparent
+			border-top: 8px solid #00b7bd

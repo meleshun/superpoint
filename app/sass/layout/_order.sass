@@ -1,0 +1,90 @@
+/* ORDER */
+.order
+	padding: 64px 16px 16px 70px
+	cursor: default
+
+	&__title
+		display: inline-block
+		color: $contrast-color
+		border-bottom: 1px solid $accent-color
+
+	&__input-search
+		position: relative
+		cursor: text
+
+		&::after
+			content: url(../img/search.svg)
+			position: absolute
+			z-index: -1
+			bottom: 4px
+			right: 24px
+			width: 12px
+
+		&--baseline::after
+			top: 52%
+			transform: translateY(-50%)
+	
+	&__input-nmfc
+		width: 40px
+		min-width: 40px
+
+	&__input-un-number
+		min-width: 100px
+
+	&__input-shipping-name
+		min-width: 150px
+
+	&__checkbox
+		text-align: center
+
+	&__shipper-details
+		margin-top: 10px
+
+	&__shipper-table
+		width: 50%
+		margin-top: 4px
+		& td
+			width: 60%
+
+	&__shipper-company-name
+		color: $light-font-color
+		font-size: 0.9em
+		margin-bottom: 6px
+
+	&__shipment-details
+		margin-top: 34px
+		overflow-x: auto
+
+	&__shipment-table
+		width: 100%
+		margin-top: 10px
+		& tr
+			&:first-child,
+			&:last-child
+				border-bottom: 1px solid $light-font-color
+		& th
+			padding: 6px 0
+		& td
+			vertical-align: baseline
+			padding: 18px 0
+			color: $dark-font-color
+		& td,
+		& th
+			padding-right: 20px
+
+			&:last-child
+				padding-right: 0
+
+
+/* TERMS USE */
+.terms-use
+	font-size: 14px
+	text-align: right
+	margin-top: 20px
+	user-select: none
+	a
+		color: $contrast-color
+		text-decoration: underline
+
+	button
+		margin-top: 16px

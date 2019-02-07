@@ -1,0 +1,83 @@
+/* PROGRESS */
+.progress-bar
+	padding: 36px 0
+	color: $light-font-color
+	user-select: none
+	
+	&__item
+		position: relative
+		float: left
+		height: 2px
+		background-color: $light-font-color
+		&:nth-child(1)
+			width: 10%
+		&:nth-child(2)
+			width: 30%
+		&:nth-child(3)
+			width: 30%
+		&:nth-child(4)
+			width: 30%
+		&:nth-child(1) .progress-bar__text
+			left: 0
+			transform: translateY(-50%)
+
+		&--active
+			background-color: $contrast-color
+			& .progress-bar__icon
+				border-color: $contrast-color
+				background-color: $contrast-color
+
+				& svg
+					& .cls-1
+						fill: none
+						stroke: $base-color
+					& .cls-2
+						fill: $base-color
+
+		&--active,
+		&--current
+			& .progress-bar__text
+				color: $contrast-color
+
+		&--current
+			background-color: $contrast-color
+			& .progress-bar__icon
+				border-color: $contrast-color
+				background-color: $base-color
+
+				& svg
+					& .cls-1
+						stroke: $contrast-color
+
+
+	&__text
+		position: absolute
+		right: 0
+		bottom: 0
+		transform: translateX(-100%) translateY(-50%)
+
+
+	&__icon
+		box-sizing: border-box
+		position: absolute
+		right: 0
+		top: 50%
+		width: 26px
+		height: 26px
+		border-radius: 50%
+		transform: translateY(-50%)
+		border: 2px solid $light-font-color
+		background-color: $base-color
+
+		& svg
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translateX(-50%) translateY(-50%)
+			width: 14px
+
+			& .cls-1
+				fill: none
+				stroke: $light-font-color
+			& .cls-2
+				fill: $light-font-color

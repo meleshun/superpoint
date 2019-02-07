@@ -1,0 +1,76 @@
+.sidebar
+	position: fixed
+	z-index: 1
+	height: 100%
+	width: 50px
+	padding-top: 80px
+	box-shadow: 0 0 4px 0 rgba(0,0,0,.15)
+	overflow-x: hidden
+	background-color: $base-color
+	transition: width $sidebar-animation-time ease
+	user-select: none
+
+	&:hover
+		width: 146px
+
+	& .cls-1,
+	& .cls-2
+		fill: none
+		stroke: #6e6b68
+	& .cls-3
+		fill: #6e6b68
+
+	&__item
+		position: relative
+		white-space: nowrap
+		display: block
+		padding: .8em 0
+		padding-left: 50px
+
+		& svg
+			position: absolute
+			left: 16px
+
+		&::after
+			content: ''
+			position: absolute
+			width: 4px
+			height: 100%
+			top: 0
+			right: -2px
+			border-radius: 20% 0 0 20%
+
+		&:hover
+			& .cls-1,
+			& .cls-2
+				fill: none
+				stroke: $accent-color
+			& .cls-3
+				fill: $accent-color
+			&::after
+				background-color: $accent-color
+		
+		& svg
+			width: 1.2em
+			padding-right: 10px
+			float: left
+
+		&--active
+			color: $accent-color
+			&::after
+				content: ''
+				position: absolute
+				width: 4px
+				height: 100%
+				top: 0
+				right: -2px
+				border-radius: 20% 0 0 20%
+				background-color: $accent-color
+
+			& .cls-1,
+			& .cls-2
+				fill: none
+				stroke: $accent-color
+			& .cls-3
+				fill: $accent-color
+
